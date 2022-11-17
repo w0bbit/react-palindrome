@@ -4,12 +4,15 @@ print = console.log;
 function App() {
 
   const handleChange = () => {
-    print('hi')
+    const inputElement = document.getElementById('input');
+    const outputElement = document.getElementById('output');
+    outputElement.innerHTML = inputElement.value;
   }
 
   return (
     <div className="App">
-      <input onChange={handleChange}></input>
+      <input id='input' onChange={handleChange}></input>
+      <h3 id='output'></h3>
     </div>
   )
 }
